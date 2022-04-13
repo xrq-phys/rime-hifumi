@@ -35,7 +35,6 @@ engine:
   translators:
     - punct_translator
     - script_translator
-    # - script_translator@mozc
     - script_translator@mandarin_lookup
   filters:
     - reverse_lookup_filter@mandarin_reverse_lookup
@@ -440,13 +439,6 @@ translator:
 editor:
   bindings:
     Return: commit_script_text
-
-mozc:
-  dictionary: ""
-  user_dict: hifumi.mozc
-  db_class: tabledb #stabledb
-  enable_completion: false
-  enable_sentence: true
 
 mandarin_lookup:
   tag: mandarin_lookup
