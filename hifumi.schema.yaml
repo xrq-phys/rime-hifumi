@@ -29,16 +29,25 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor
+    - affix_segmentor@mandarin_lookup
     - punct_segmentor
     - fallback_segmentor
   translators:
     - punct_translator
     # - table_translator@mozc
     - script_translator
+    - script_translator@mandarin_lookup
+  filters:
+    - reverse_lookup_filter@mandarin_reverse_lookup
 
 # menu:
 #   alternative_select_keys: "0123456789"
 #   page_size: 10
+
+recognizer:
+  import_preset: default
+  patterns:
+    mandarin_lookup: "`[a-z;/,.]*`?$"
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-_"
@@ -438,6 +447,24 @@ mozc:
   db_class: tabledb #stabledb
   enable_completion: false
   enable_sentence: true
+
+mandarin_lookup:
+  tag: mandarin_lookup
+  prefix: "`"
+  dictionary: terra_pinyin
+  prism: terra_pinyin
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  # TODO: Add "Simplifier to Japanese Typeface"
+  tips: 〔陸普〕
+
+mandarin_reverse_lookup:
+  tags: [ mandarin_lookup ]
+  dictionary: hifumi
+  spelling_hints: 10
+  comment_format: *kana_table
 
 __patch:
   - hifumi.custom:/patch?
