@@ -443,8 +443,8 @@ editor:
 mandarin_lookup:
   tag: mandarin_lookup
   prefix: "`"
-  dictionary: terra_pinyin
-  prism: terra_pinyin
+  dictionary: luna_pinyin
+  prism: luna_pinyin
   preedit_format:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
