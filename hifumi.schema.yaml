@@ -66,17 +66,16 @@ speller:
     - 'derive/ja/zya' # じゃ
     - 'derive/ju/zyu' # じゅ
     - 'derive/jo/zyo' # じょ
-    - 'derive/ji/di' # じ
-    - 'derive/ja/dya' # じゃ
-    - 'derive/ju/dyu' # じゅ
-    - 'derive/jo/dyo' # じょ
-    - 'derive/jo/jyo' # Yet other spellings.
+    - 'derive/jo/jyo' # じょ
     - 'derive/tsu/tu' # つ
     - 'derive/chi/ti' # ち
     - 'derive/cha/tya' # ちゃ
     - 'derive/chu/tyu' # ちゅ
     - 'derive/cho/tyo' # ちょ
-    # - 'derive/fu/hu/' # ふ 「ちゅ」、「しぅ」と衝突
+    - 'derive|we|whe|' # うぇ
+    - 'derive|wi|whi|' # うぃ
+    # TODO: [aiueo]h|#1fu| しないと 「ちゅ」、「しぅ」と衝突
+    # - 'derive/fu/hu/' # ふ
 
 
 punctuator:
@@ -115,6 +114,7 @@ punctuator:
 translator:
   # 使用 JMDict 字典
   # Patched JMDict をベース辞書として使います
+  # TODO: Reconvert Mozc
   dictionary: hifumi
   enable_completion: false
   enable_user_dict: true
@@ -132,17 +132,15 @@ translator:
     - 'derive|zya|ja|'
     - 'derive|zyu|ju|'
     - 'derive|zyo|jo|'
-    # - 'derive|di|ji|' # ぢ、ジは共同変換で分別表示
-    - 'derive|dya|ja|'
-    - 'derive|dyu|ju|'
-    - 'derive|dyo|jo|'
     - 'derive|jyo|jo|'
     - 'derive|tu|tsu|'
     - 'derive|ti|chi|'
     - 'derive|tya|cha|'
     - 'derive|tyu|chu|'
     - 'derive|tyo|cho|'
-    # - 'derive|hu|fu|'
+    - 'derive|we|whe|'
+    - 'derive|wi|whi|'
+    # - 'derive|hu|fu|' # TODO: [aiueo]h|#1fu|
     # 仮名表
     - "xform|_tsu|っ|"
     - "xform|_ke|ゖ|"
@@ -165,7 +163,6 @@ translator:
     - "xform|bbyo|っびょ|"
     - "xform|bbyu|っびゅ|"
     - "xform|bbya|っびゃ|"
-    - "xform|hhu|っほぅ|"
     - "xform|ffyo|っふょ|"
     - "xform|ffyu|っふゅ|"
     - "xform|ffya|っふゃ|"
@@ -176,20 +173,10 @@ translator:
     - "xform|hhyo|っひょ|"
     - "xform|hhyu|っひゅ|"
     - "xform|hhya|っひゃ|"
-    - "xform|ddu|っどぅ|"
-    - "xform|ddyo|っでょ|"
-    - "xform|ddyu|っでゅ|"
-    - "xform|ddya|っでゃ|"
-    - "xform|ddi|っでぃ|"
-    - "xform|jjo|っぢょ|"
-    - "xform|jju|っぢゅ|"
-    - "xform|jja|っぢゃ|"
-    - "xform|jje|っぢぇ|"
-    - "xform|ttu|っとぅ|"
-    - "xform|ttyo|ってょ|"
-    - "xform|ttyu|ってゅ|"
-    - "xform|ttya|ってゃ|"
-    - "xform|tti|ってぃ|"
+    - "xform|ddyo|っぢょ|"
+    - "xform|ddyu|っぢゅ|"
+    - "xform|ddya|っぢゃ|"
+    - "xform|ddye|っぢぇ|"
     - "xform|ttso|っつぉ|"
     - "xform|ttse|っつぇ|"
     - "xform|ttsi|っつぃ|"
@@ -198,17 +185,14 @@ translator:
     - "xform|tchu|っちゅ|"
     - "xform|tcha|っちゃ|"
     - "xform|tche|っちぇ|"
-    - "xform|zzi|っずぃ|"
     - "xform|jjo|っじょ|"
     - "xform|jju|っじゅ|"
     - "xform|jja|っじゃ|"
     - "xform|jje|っじぇ|"
-    - "xform|ssi|っすぃ|"
     - "xform|ssho|っしょ|"
     - "xform|sshu|っしゅ|"
     - "xform|ssha|っしゃ|"
     - "xform|sshe|っしぇ|"
-    - "xform|ggwa|っぐゎ|"
     - "xform|ggwo|っぐぉ|"
     - "xform|ggwe|っぐぇ|"
     - "xform|ggwi|っぐぃ|"
@@ -216,7 +200,6 @@ translator:
     - "xform|ggyo|っぎょ|"
     - "xform|ggyu|っぎゅ|"
     - "xform|ggya|っぎゃ|"
-    - "xform|kkwa|っくゎ|"
     - "xform|kkwo|っくぉ|"
     - "xform|kkwe|っくぇ|"
     - "xform|kkwi|っくぃ|"
@@ -253,8 +236,8 @@ translator:
     - "xform|hha|っは|"
     - "xform|ddo|っど|"
     - "xform|dde|っで|"
-    - "xform|zzu|っづ|"
-    - "xform|jji|っぢ|"
+    - "xform|ddu|っづ|"
+    - "xform|ddi|っぢ|"
     - "xform|dda|っだ|"
     - "xform|tto|っと|"
     - "xform|tte|って|"
@@ -307,15 +290,10 @@ translator:
     - "xform|nyo|にょ|"
     - "xform|nyu|にゅ|"
     - "xform|nya|にゃ|"
-    - "xform|du|どぅ|"
-    - "xform|dyo|でょ|"
-    - "xform|dyu|でゅ|"
-    - "xform|dya|でゃ|"
-    - "xform|tu|とぅ|"
-    # - "xform|tyo|てょ|"
-    # - "xform|tyu|てゅ|"
-    # - "xform|tya|てゃ|"
-    - "xform|ti|てぃ|"
+    - "xform|dyo|ぢょ|"
+    - "xform|dyu|ぢゅ|"
+    - "xform|dya|ぢゃ|"
+    - "xform|dye|ぢぇ|"
     - "xform|tso|つぉ|"
     - "xform|tse|つぇ|"
     - "xform|tsi|つぃ|"
@@ -324,17 +302,14 @@ translator:
     - "xform|chu|ちゅ|"
     - "xform|cha|ちゃ|"
     - "xform|che|ちぇ|"
-    - "xform|zi|ずぃ|"
     - "xform|jo|じょ|"
     - "xform|ju|じゅ|"
     - "xform|ja|じゃ|"
     - "xform|je|じぇ|"
-    - "xform|si|すぃ|"
     - "xform|sho|しょ|"
     - "xform|shu|しゅ|"
     - "xform|sha|しゃ|"
     - "xform|she|しぇ|"
-    - "xform|gwa|ぐゎ|"
     - "xform|gwo|ぐぉ|"
     - "xform|gwe|ぐぇ|"
     - "xform|gwi|ぐぃ|"
@@ -342,7 +317,6 @@ translator:
     - "xform|gyo|ぎょ|"
     - "xform|gyu|ぎゅ|"
     - "xform|gya|ぎゃ|"
-    - "xform|kwa|くゎ|"
     - "xform|kwo|くぉ|"
     - "xform|kwe|くぇ|"
     - "xform|kwi|くぃ|"
@@ -361,12 +335,10 @@ translator:
     - "xform|whe|うぇ|"
     - "xform|whi|うぃ|"
     - "xform|wha|うぁ|"
-    - "xform|tsu|つ|" # tu
-    - "xform|chi|ち|" # ti
-    - "xform|shi|し|" # si
+    - "xform|tsu|つ|"
+    - "xform|chi|ち|"
+    - "xform|shi|し|"
     - "xform|wo|を|"
-    - "xform|we|ゑ|"
-    - "xform|wi|ゐ|"
     - "xform|wa|わ|"
     - "xform|ro|ろ|"
     - "xform|re|れ|"
@@ -403,7 +375,7 @@ translator:
     - "xform|na|な|"
     - "xform|do|ど|"
     - "xform|de|で|"
-    - "xform|zu|づ|"
+    - "xform|du|づ|"
     - "xform|di|ぢ|"
     - "xform|da|だ|"
     - "xform|to|と|"
