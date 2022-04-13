@@ -183,6 +183,8 @@
 ち	chi
 し	shi
 を	wo
+ゑ	whe
+ゐ	whi
 わ	wa
 ろ	ro
 れ	re

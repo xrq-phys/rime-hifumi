@@ -6,7 +6,7 @@ name: hifumi
 version: 'v0.1'
 
 import_tables:
-  - 'jmdict'
+  - 'mozc'
 ...
 
 # 必須
