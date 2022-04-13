@@ -34,8 +34,8 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    # - table_translator@mozc
     - script_translator
+    # - script_translator@mozc
     - script_translator@mandarin_lookup
   filters:
     - reverse_lookup_filter@mandarin_reverse_lookup
@@ -47,7 +47,7 @@ engine:
 recognizer:
   import_preset: default
   patterns:
-    mandarin_lookup: "`[a-z;/,.]*`?$"
+    mandarin_lookup: "`[a-z]*"
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-_"
