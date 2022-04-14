@@ -35,6 +35,8 @@ engine:
   translators:
     - punct_translator
     - script_translator
+    - lua_translator@katakana
+    - lua_translator@katakana_halfwidth
     - script_translator@mandarin_lookup
   filters:
     - reverse_lookup_filter@mandarin_reverse_lookup
@@ -46,6 +48,8 @@ engine:
 recognizer:
   import_preset: default
   patterns:
+    katakana: "^[a-z]*;$"
+    katakana_halfwidth: "^[a-z]*;;$"
     mandarin_lookup: "`[a-z]*"
 
 speller:
