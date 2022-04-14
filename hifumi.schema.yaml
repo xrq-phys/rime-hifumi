@@ -8,7 +8,7 @@ schema:
 
 switches:
   - name: ascii_mode
-    reset: 1
+    reset: 0
     states: [ "中字", "英数" ] 
   - name: full_shape
     states: [ 半角, 全角 ]
@@ -41,9 +41,8 @@ engine:
   filters:
     - reverse_lookup_filter@mandarin_reverse_lookup
 
-# menu:
-#   alternative_select_keys: "0123456789"
-#   page_size: 10
+key_binder:
+  import_preset: default
 
 recognizer:
   import_preset: default
@@ -76,8 +75,8 @@ speller:
     - 'derive/cha/tya' # ちゃ
     - 'derive/chu/tyu' # ちゅ
     - 'derive/cho/tyo' # ちょ
-    - 'derive|we|whe|' # うぇ
-    - 'derive|wi|whi|' # うぃ
+    - 'derive/whe/we/' # うぇ
+    - 'derive/whi/wi/' # うぃ
     # TODO: [aiueo]h|#1fu| しないと 「ちゅ」、「しぅ」と衝突
     # - 'derive/fu/hu/' # ふ
 
