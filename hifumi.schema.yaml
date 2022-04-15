@@ -69,6 +69,8 @@ speller:
     - 'derive/ja/zya' # じゃ
     - 'derive/ju/zyu' # じゅ
     - 'derive/jo/zyo' # じょ
+    - 'derive/ja/jya' # じゃ
+    - 'derive/ju/jyu' # じゅ
     - 'derive/jo/jyo' # じょ
     - 'derive/tsu/tu' # つ
     - 'derive/chi/ti' # ち
@@ -136,6 +138,8 @@ translator:
     - 'derive|zya|ja|'
     - 'derive|zyu|ju|'
     - 'derive|zyo|jo|'
+    - 'derive|jya|ja|'
+    - 'derive|jyu|ju|'
     - 'derive|jyo|jo|'
     - 'derive|tu|tsu|'
     - 'derive|ti|chi|'

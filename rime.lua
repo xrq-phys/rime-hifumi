@@ -266,6 +266,7 @@ function katakana(seq, seg)
       seq = seq:gsub("i", "イ")
       seq = seq:gsub("a", "ア")
       seq = seq:gsub("n", "ン")
+      seq = seq:gsub("-", "ー")
       yield(Candidate("katakana", seg.start, seg._end, seq, " カタカナ"))
    end
 end
