@@ -47,8 +47,8 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    katakana: "^[a-z]*;$"
-    katakana_halfwidth: "^[a-z]*;;$"
+    katakana: "^[a-z-]*;$"
+    katakana_halfwidth: "^[a-z-]*;;$"
     mandarin_lookup: "`[a-z]*"
 
 speller:
@@ -108,6 +108,7 @@ punctuator:
     ";" : ；
     ":" : ：
     "," : [ 、, ， ]
+    "." : 。
     "/" : [ ・, ÷, ／ ]
     "<" : [ ＜, 〈, 《 ]
     ">" : [ ＞, 〉, 》 ]
