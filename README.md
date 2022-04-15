@@ -37,6 +37,6 @@ bash rime-install xrq-phys/rime-hifumi
 
 # Roadmaps THAT DEPENDS ON UPSTREAM
 
-- [ ] 预测输入／予測変換：该功能依赖于
+- [ ] 预测输入／予測変換：该功能较为复杂，目前认为需等待上游添加中文预测后配置日文预测。当然亦有可能着手进行基于 Lua 的实现。
 
 
