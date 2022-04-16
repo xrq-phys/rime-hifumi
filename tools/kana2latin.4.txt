@@ -1,0 +1,268 @@
+っりょ	rryo
+っりゅ	rryu
+っりゃ	rrya
+っぴょ	ppyo
+っぴゅ	ppyu
+っぴゃ	ppya
+っびょ	bbyo
+っびゅ	bbyu
+っびゃ	bbya
+っふょ	ffyo
+っふゅ	ffyu
+っふゃ	ffya
+っふぉ	ffo
+っふぇ	ffe
+っふぃ	ffi
+っふぁ	ffa
+っひょ	hhyo
+っひゅ	hhyu
+っひゃ	hhya
+っぢょ	ddyo
+っぢゅ	ddyu
+っぢゃ	ddya
+っぢぇ	ddye
+っつぉ	ttso
+っつぇ	ttse
+っつぃ	ttsi
+っつぁ	ttsa
+っちょ	tcho	ttyo
+っちゅ	tchu	ttyu
+っちゃ	tcha	ttya
+っちぇ	tche	ttye
+っじょ	jjo	jjyo	zzyo
+っじゅ	jju	jjyu	zzyu
+っじゃ	jja	jjya	zzya
+っじぇ	jje	jjye	zzye
+っしょ	ssho	ssyo
+っしゅ	sshu	ssyu
+っしゃ	ssha	ssya
+っしぇ	sshe	ssye
+っぐぉ	ggwo
+っぐぇ	ggwe
+っぐぃ	ggwi
+っぐぁ	ggwa
+っぎょ	ggyo
+っぎゅ	ggyu
+っぎゃ	ggya
+っくぉ	kkwo
+っくぇ	kkwe
+っくぃ	kkwi
+っくぁ	kkwa
+っきょ	kkyo
+っきゅ	kkyu
+っきゃ	kkya
+っゔょ	vvyo
+っゔゅ	vvyu
+っゔゃ	vvya
+っゔぉ	vvo
+っゔぇ	vve
+っゔぃ	vvi
+っゔぁ	vva
+っろ	rro
+っれ	rre
+っる	rru
+っり	rri
+っら	rra
+っぽ	ppo
+っぺ	ppe
+っぷ	ppu
+っぴ	ppi
+っぱ	ppa
+っぼ	bbo
+っべ	bbe
+っぶ	bbu
+っび	bbi
+っば	bba
+っほ	hho
+っへ	hhe
+っふ	ffu	hhu
+っひ	hhi
+っは	hha
+っど	ddo
+っで	dde
+っづ	ddu
+っぢ	ddi
+っだ	dda
+っと	tto
+って	tte
+っつ	ttsu	ttu
+っち	tchi	tti
+った	tta
+っぞ	zzo
+っぜ	zze
+っず	zzu
+っじ	jji	zzi
+っざ	zza
+っそ	sso
+っせ	sse
+っす	ssu
+っし	sshi	ssi
+っさ	ssa
+っご	ggo
+っげ	gge
+っぐ	ggu
+っぎ	ggi
+っが	gga
+っこ	kko
+っけ	kke
+っく	kku
+っき	kki
+っか	kka
+っゔ	vvu
+りょ	ryo
+りゅ	ryu
+りゃ	rya
+みょ	myo
+みゅ	myu
+みゃ	mya
+ぴょ	pyo
+ぴゅ	pyu
+ぴゃ	pya
+びょ	byo
+びゅ	byu
+びゃ	bya
+ふょ	fyo
+ふゅ	fyu
+ふゃ	fya
+ふぉ	fo
+ふぇ	fe
+ふぃ	fi
+ふぁ	fa
+ひょ	hyo
+ひゅ	hyu
+ひゃ	hya
+にょ	nyo
+にゅ	nyu
+にゃ	nya
+ぢょ	dyo
+ぢゅ	dyu
+ぢゃ	dya
+ぢぇ	dye
+つぉ	tso
+つぇ	tse
+つぃ	tsi
+つぁ	tsa
+ちょ	cho	tyo
+ちゅ	chu	tyu
+ちゃ	cha	tya
+ちぇ	che	tye
+じょ	jo	jyo	zyo
+じゅ	ju	jyu	zyu
+じゃ	ja	jya	zya
+じぇ	je	jye	zye
+しょ	sho	syo
+しゅ	shu	syu
+しゃ	sha	sya
+しぇ	she	sye
+ぐぉ	gwo
+ぐぇ	gwe
+ぐぃ	gwi
+ぐぁ	gwa
+ぎょ	gyo
+ぎゅ	gyu
+ぎゃ	gya
+くぉ	kwo
+くぇ	kwe
+くぃ	kwi
+くぁ	kwa
+きょ	kyo
+きゅ	kyu
+きゃ	kya
+ゔょ	vyo
+ゔゅ	vyu
+ゔゃ	vya
+ゔぉ	vo
+ゔぇ	ve
+ゔぃ	vi
+ゔぁ	va
+うぉ	who
+うぇ	whe	we
+うぃ	whi	wi
+うぁ	wha
+つ	tsu	tu
+ち	chi	ti
+し	shi	si
+を	wo
+ゑ	whe
+ゐ	whi
+わ	wa
+ろ	ro
+れ	re
+る	ru
+り	ri
+ら	ra
+よ	yo
+ゆ	yu
+や	ya
+も	mo
+め	me
+む	mu
+み	mi
+ま	ma
+ぽ	po
+ぺ	pe
+ぷ	pu
+ぴ	pi
+ぱ	pa
+ぼ	bo
+べ	be
+ぶ	bu
+び	bi
+ば	ba
+ほ	ho
+へ	he
+ふ	fu	hu
+ひ	hi
+は	ha
+の	no
+ね	ne
+ぬ	nu
+に	ni
+な	na
+ど	do
+で	de
+づ	du
+ぢ	di
+だ	da
+と	to
+て	te
+た	ta
+ぞ	zo
+ぜ	ze
+ず	zu
+じ	ji	zi
+ざ	za
+そ	so
+せ	se
+す	su
+さ	sa
+ご	go
+げ	ge
+ぐ	gu
+ぎ	gi
+が	ga
+こ	ko
+け	ke
+く	ku
+き	ki
+か	ka
+ゔ	vu
+あ	a
+い	i
+う	u
+え	e
+お	o
+ん	n
+っ	_tsu	xtsu
+ゖ	_ke 	xke
+ゕ	_ka 	xka
+ゎ	_wa 	xwa
+ょ	_yo 	xyo
+ゅ	_yu 	xyu
+ゃ	_ya 	xya
+ぉ	_o  	xo
+ぇ	_e  	xe
+ぅ	_u  	xu
+ぃ	_i  	xi
+ぁ	_a  	xa
+ー	-

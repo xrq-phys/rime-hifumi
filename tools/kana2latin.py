@@ -1,33 +1,44 @@
 #!/usr/bin/env python
 
 import re
+from itertools import chain
 
 # Whether this string is all-katakana
 is_katakana_str = re.compile('[\u30A1-\u30FF]+')
 
 # Kana-to-Latin lookup table
-with open("tools/kana2latin.3.txt") as fkana:
-    kanas = [ [ ln.split()[0], ln.split()[1] ] for ln in fkana.readlines() ]
+with open("tools/kana2latin.4.txt") as fkana:
+    kanas = [ (ln.split()[0], ln.split()[1::]) for ln in fkana.readlines() ]
 
 print("""
       Convert Mozc's kana dictionary into Latin alphabetical expression.
       """)
 
-def convert_line(fout, ln):
-    kana  = ln.split()[ 0]
-    kanji = ln.split()[-1]
-    latin = kana
-    for e in kanas:
-        latin = latin.replace(e[0], e[1])
-    # Only convert not-so-long entries.
-    if len(kanji) < 10:
-        if is_katakana_str.fullmatch(kanji) is None:
-            # Normal kanji/kana string.
-            print("%s\t%s" % (kanji, latin), file=fout)
-        else:
-            # Pure katakana string. Yields hiragana/katakana dual strings.
-            print("%s\t%s" % (kanji, latin), file=fout)
-            print("%s\t%s" % (kana,  latin), file=fout)
+def convert_line(fout, ln, kanji_blackitem):
+    p = int(ln.split('\t')[-2]) * 100 // 8900
+    p = min(p, 100)
+    kana  = ln.split('\t')[ 0]
+    kanji = ln.split('\t')[-1]
+    latin = [ kana ]
+    # Mozc contains *neighbouring* duplicates.
+    if kanji != kanji_blackitem:
+        # Only convert not-so-long entries.
+        if len(kanji) < 10:
+            for e in kanas:
+                se, des = e
+                # Avoid list proliferation: Replace & expand only when there's a match.
+                if se in latin[0]:
+                    latin = list(chain.from_iterable([ [ las.replace(se, de) for las in latin ] for de in des ]))
+
+            for las in latin:
+                if True: # is_katakana_str.fullmatch(kanji) is None:
+                    # Normal kanji/kana string.
+                    print("%s\t%s\t%d%%" % (kanji, las, p), file=fout)
+                else:
+                    # Pure katakana string. Yields hiragana/katakana dual strings.
+                    print("%s\t%s\t%d%%" % (kanji, las, p), file=fout)
+                    print("%s\t%s\t%d%%" % (kana,  las, p), file=fout)
+    return kanji
 
 if __name__ == "__main__":
     fout = open("mozc.dict.yaml", "w")
@@ -78,5 +89,7 @@ sort: by_weight
 
           """, file=fout)
     with open("tools/mozcdic.txt") as fin:
-        [ convert_line(fout, _) for _ in fin.readlines() ]
+        kanji_converted = ""
+        for ln in fin.readlines():
+            kanji_converted = convert_line(fout, ln[:-1:], kanji_converted)
 

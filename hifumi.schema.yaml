@@ -54,34 +54,8 @@ recognizer:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-_"
   delimiter: "'"
-  algebra:
-    # こもじかな・長音
-    # 小假名和长音符号
-    - 'derive/_/x/'
-    - 'derive/-/q/'
-    # ロマ字代替表示
-    # 拉丁代替表示
-    - 'derive/shi/si' # し
-    - 'derive/sha/sya' # しゃ
-    - 'derive/shu/syu' # しゅ
-    - 'derive/sho/syo' # しょ
-    - 'derive/ji/zi' # じ
-    - 'derive/ja/zya' # じゃ
-    - 'derive/ju/zyu' # じゅ
-    - 'derive/jo/zyo' # じょ
-    - 'derive/ja/jya' # じゃ
-    - 'derive/ju/jyu' # じゅ
-    - 'derive/jo/jyo' # じょ
-    - 'derive/tsu/tu' # つ
-    - 'derive/chi/ti' # ち
-    - 'derive/cha/tya' # ちゃ
-    - 'derive/chu/tyu' # ちゅ
-    - 'derive/cho/tyo' # ちょ
-    - 'derive/whe/we/' # うぇ
-    - 'derive/whi/wi/' # うぃ
-    # TODO: [aiueo]h|#1fu| しないと 「ちゅ」、「しぅ」と衝突
-    # - 'derive/fu/hu/' # ふ
-
+  # algebra:
+  # 事前転換済み
 
 punctuator:
   half_shape: &punc_table
@@ -118,9 +92,6 @@ punctuator:
   full_shape: *punc_table
 
 translator:
-  # 使用 JMDict 字典
-  # Patched JMDict をベース辞書として使います
-  # TODO: Reconvert Mozc
   dictionary: hifumi
   enable_completion: false
   enable_user_dict: true
@@ -130,25 +101,19 @@ translator:
     # Speller 的逆變換
     - 'derive|x|_|'
     - 'derive|q|-|'
-    - 'derive|si|shi|'
-    - 'derive|sya|sha|'
-    - 'derive|syu|shu|'
-    - 'derive|syo|sho|'
-    - 'derive|zi|ji|'
-    - 'derive|zya|ja|'
-    - 'derive|zyu|ju|'
-    - 'derive|zyo|jo|'
-    - 'derive|jya|ja|'
-    - 'derive|jyu|ju|'
-    - 'derive|jyo|jo|'
+    - 'derive|zzi|jji|'
+    - 'derive|zzy([aueo])|jj$1|'
+    - 'derive|ty([aueo])|ch$1|'
+    - 'derive|zy([aueo])|j$1|'
+    - 'derive|jy([aueo])|j$1|'
+    - 'derive|sy([aueo])|sh$1|'
     - 'derive|tu|tsu|'
     - 'derive|ti|chi|'
-    - 'derive|tya|cha|'
-    - 'derive|tyu|chu|'
-    - 'derive|tyo|cho|'
+    - 'derive|zi|ji|'
+    - 'derive|si|shi|'
     - 'derive|we|whe|'
     - 'derive|wi|whi|'
-    # - 'derive|hu|fu|' # TODO: [aiueo]h|#1fu|
+    # - 'derive|hu|fu|' # 「ちゅ」、「しぅ」と衝突
     # 仮名表
     - "xform|_tsu|っ|"
     - "xform|_ke|ゖ|"
@@ -240,6 +205,7 @@ translator:
     - "xform|hho|っほ|"
     - "xform|hhe|っへ|"
     - "xform|ffu|っふ|"
+    - "xform|hhu|っふ|" # See above
     - "xform|hhi|っひ|"
     - "xform|hha|っは|"
     - "xform|ddo|っど|"
@@ -374,6 +340,7 @@ translator:
     - "xform|ho|ほ|"
     - "xform|he|へ|"
     - "xform|fu|ふ|"
+    - "xform|hu|ふ|" # See above
     - "xform|hi|ひ|"
     - "xform|ha|は|"
     - "xform|no|の|"
