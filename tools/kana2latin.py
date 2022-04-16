@@ -20,8 +20,8 @@ def convert_line(fout, ln, kanji_blackitem):
     kana  = ln.split('\t')[ 0]
     kanji = ln.split('\t')[-1]
     latin = [ kana ]
-    # Mozc contains *neighbouring* duplicates.
-    if kanji != kanji_blackitem:
+    # Skip *neighbouring* duplicates & non-convertable charactors.
+    if kanji != kanji_blackitem and re.match("[ゝゞ・ヽヾ～ヶヵ]", kana) is None:
         # Only convert not-so-long entries.
         if len(kanji) < 10:
             for e in kanas:
