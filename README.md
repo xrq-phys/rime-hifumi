@@ -32,6 +32,7 @@ bash rime-install xrq-phys/rime-hifumi
 
 # Roadmaps
 
+- [ ] Return composes Hiragana → Return composes composed + precomposed as Hiragana.
 - [ ] ロマ字辞書加らかな辞書に移行ーロマ字入力はかなに変換から。それより辞書のサイズを減らすことが出来ます。目前使用的字典格式为 `kagaku → 科学` 格式，之后应将其切换为 `TT@H → 科学`。式中 `TT@H` 为假名**かがく**在 JIS 键盘上的对应位置，而 `kagaku → かがく` 的转换则由 `algebra` 完成。
 - [ ] 辞書に変換確率を加え、日本語入力の効率向上を目指す。不仅使用 Mozc 辞典，导入 Mozc 的权重来提升输入效率。
 

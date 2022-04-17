@@ -31,7 +31,7 @@ def convert_line(fout, ln, kanji_blackitem):
                     latin = list(chain.from_iterable([ [ las.replace(se, de) for las in latin ] for de in des ]))
 
             for las in latin:
-                if True: # is_katakana_str.fullmatch(kanji) is None:
+                if is_katakana_str.fullmatch(kanji) is None:
                     # Normal kanji/kana string.
                     print("%s\t%s\t%d%%" % (kanji, las, p), file=fout)
                 else:
