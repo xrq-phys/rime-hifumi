@@ -115,6 +115,7 @@ translator:
     - 'derive|wi|whi|'
     # - 'derive|hu|fu|' # 「ちゅ」、「しぅ」と衝突
     # 仮名表
+    - "xform|_tu|っ|" # xtu -> _tu -> _tsu -> 「っ」 は何故か認識されてない
     - "xform|_tsu|っ|"
     - "xform|_ke|ゖ|"
     - "xform|_ka|ゕ|"
