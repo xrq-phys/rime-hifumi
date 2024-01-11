@@ -54,8 +54,9 @@ recognizer:
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz-_"
   delimiter: "'"
-  # algebra:
-  # 事前転換済み
+  algebra:
+    - derive/([^n])nn([^aiueon])/$1n$2/
+    # ん○ 以外は事前転換済み
 
 punctuator:
   half_shape: &punc_table
@@ -107,6 +108,7 @@ translator:
     - 'derive|zy([aueo])|j$1|'
     - 'derive|jy([aueo])|j$1|'
     - 'derive|sy([aueo])|sh$1|'
+    - 'derive|([^n])n([^aiueon])|$1nn$2|'
     - 'derive|tu|tsu|'
     - 'derive|ti|chi|'
     - 'derive|zi|ji|'
@@ -344,6 +346,7 @@ translator:
     - "xform|hu|ふ|" # See above
     - "xform|hi|ひ|"
     - "xform|ha|は|"
+    - "xform|nn|ん|"
     - "xform|no|の|"
     - "xform|ne|ね|"
     - "xform|nu|ぬ|"
@@ -377,7 +380,7 @@ translator:
     - "xform|ki|き|"
     - "xform|ka|か|"
     - "xform|vu|ゔ|"
-    - "xlit|aiueon|あいうえおん|"
+    - "xlit|aiueo|あいうえお|"
     - "xform|-|ー|"
     # かな出力のため、文割符を消します
     # 消除分隔符、假名上屏

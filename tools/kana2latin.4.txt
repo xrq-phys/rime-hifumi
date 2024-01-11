@@ -252,7 +252,7 @@
 う	u
 え	e
 お	o
-ん	n
+ん	nn
 っ	_tsu	xtsu
 ゖ	_ke 	xke
 ゕ	_ka 	xka
