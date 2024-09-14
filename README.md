@@ -4,12 +4,12 @@
 
 # Installation
 
-**TBA: 日本語で Rime のインストール指針を加える**
-
 [Plum](https://github.com/rime/plum):
 ```
 bash rime-install xrq-phys/rime-hifumi
 ```
+
+### カタカナ変換
 
 **重要: カタカナ変換のため以下のプロセスもおこなって下さい**
 
@@ -17,6 +17,15 @@ bash rime-install xrq-phys/rime-hifumi
 
 - このレポジトリにある [`rime.lua`](./rime.lua) を Rime Config (macOS だと `~/Library/Rime`) にコピー。将本 Repo 中的 [`rime.lua`](rime.lua) 拷贝至 Rime 配置目录下。若已有重名则请将其内容拷贝至您的 `rime.lua` 之中。
 - Deploy Rime.
+
+### 無変換ひらがな入力
+
+若要实现Return键平假名上屏，可以使用 [这里](https://github.com/xrq-phys/librime/releases/tag/R6Jun14) 提供的 dll/dylib 文件。
+同时，该功能为已作为 commit_script_text 的默认行为整合入 librime。在 Weasel, Squirrel 和 iBus 的下一个版本中将不再需要这个操作。
+
+### Weasel では 64-bit 版を使用してください
+
+**请注意**: Mozc 词典非常庞大，会导致 deployment 的临时内存占用超出 32-bit 软件的 4GB 限制（实际占用约为 5GB 不到）。因此，请尽量在 64-bit 环境下使用 Rime-HiFuMi（[Weasel](https://github.com/rime/weasel/releases) 的最新版也已经支持 64-bit）。
 
 # Usage
 
