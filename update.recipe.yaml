@@ -1,0 +1,14 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: install
+  args:
+  description: >-
+    安装（会覆盖rime.lua）
+install_files: >-
+  lua/*.*
+  mozc.dict.yaml
+  hifumi.dict.yaml
+  hifumi.schema.yaml
+  rime.lua
+

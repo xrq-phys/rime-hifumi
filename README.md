@@ -6,8 +6,11 @@
 
 [Plum](https://github.com/rime/plum):
 ```
-bash rime-install xrq-phys/rime-hifumi
-# 重要: カタカナ変換のため以下のプロセスもおこなって下さい
+# Install & create / override `rime.lua`:
+bash rime-install xrq-phys/rime-hifumi:recipes/install
+
+# Update / if you already have a `rime.lua`:
+bash rime-install xrq-phys/rime-hifumi:recipes/update
 RIME_LUA=~/Library/Squirrel/rime.lua # 鼠须管
 cat >> $RIME_LUA<<EOF
 katakana = require("katakana")
