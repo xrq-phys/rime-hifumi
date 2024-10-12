@@ -7,15 +7,14 @@
 [Plum](https://github.com/rime/plum):
 ```
 bash rime-install xrq-phys/rime-hifumi
+# 重要: カタカナ変換のため以下のプロセスもおこなって下さい
+RIME_LUA=~/Library/Squirrel/rime.lua # 鼠须管
+cat >> $RIME_LUA<<EOF
+katakana = require("katakana")
+katakana_halfwidth = require("katakana_halfwidth")
+EOF
 ```
-
-### カタカナ変換
-
-**重要: カタカナ変換のため以下のプロセスもおこなって下さい**
-
-为了片假名输入支持，以下步骤亦为必须：
-
-- このレポジトリにある [`rime.lua`](./rime.lua) を Rime Config (macOS だと `~/Library/Rime`) にコピー。将本 Repo 中的 [`rime.lua`](rime.lua) 拷贝至 Rime 配置目录下。若已有重名则请将其内容拷贝至您的 `rime.lua` 之中。
+- Add Hifumi to your `default.yaml`/`default.custom.yaml`.
 - Deploy Rime.
 
 ### 無変換ひらがな入力
