@@ -9,7 +9,7 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ "中字", "英数" ] 
+    states: [ "変換", "無変換" ] 
   - name: full_shape
     states: [ 半角, 全角 ]
   - name: ascii_punct
